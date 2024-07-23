@@ -306,10 +306,14 @@ h4{
   h3{
     padding-left: 289px;
   }
+  .forecast-item{
+    width: 100px;
+  }
+  
 }
-@media only screen and (max-width:280px) {
-  .forecast{
-    gap:5px;
+@media only screen and (max-width:350px) {
+  .forecast-item{
+    width: 85px;
   }
   
 }
