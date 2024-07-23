@@ -287,12 +287,51 @@ h4{
   color: #555;
 }
 @media only screen and (max-width:830px) {
+  nav{
+    margin-top: 0px;
+    height: 70px;
+    width: 100vw;
+    border-radius: 0px;
+  }
+  
+  nav .app{
+    font-size:4vw;
+  }
+
   #weatherResult{
     flex-direction: column;
   }
   .daily-forecast{
-    gap: 0px;
+    gap: 10px;
+    
   }
+  .daily-forecast-item{
+    width:20vw;
+  }
+ .forecast-item{
+  width: 200px;
+  margin-bottom: 10px;
+ }
+}
+@media only screen and  (max-width:830px) {
+  
+ .forecast-item{
+  width: 200px;
+  margin-bottom: 10px;
+ }
+}
+@media only screen and  (max-width:700px) {
+ .forecast-item{
+  width: 150px;
+ }
+}
+@media only screen and  (max-width:640px) {
+  nav #inputfild input{
+    height: 40px;
+    width: 200px;
+    font-size: 20px;
+  }
+ 
 }
 @media only screen and (max-width:500px) {
   
@@ -309,11 +348,42 @@ h4{
   .forecast-item{
     width: 100px;
   }
+  nav{
+    justify-content: space-evenly;
+  }
+  nav #inputfild input{
+    width: 45vw;
+  }
+  nav #inputfild button{
+    height: 40px;
+    width: 80px;
+  
+  }
   
 }
+@media only screen and (max-width:480px){
+  nav #inputfild{
+    margin-right: 0px;
+  }
+  nav #inputfild button{
+    height: 40px;
+    width: 70px;
+    font-size: 20px;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    color: #6c6b6b;
+    border: none;
+  }
+}
 @media only screen and (max-width:350px) {
+  nav .app{
+    font-size: 10px;
+  }
   .forecast-item{
     width: 85px;
+  }
+  #flexdiv {
+    display: flex;
   }
   
 }
