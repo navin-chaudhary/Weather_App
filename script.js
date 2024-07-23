@@ -11,12 +11,12 @@ button.addEventListener('click', () => {
             const data = await api.json();
             console.log(data);
             const { lat, lon } = data.list[0].coord;
-            fetchdata(lat, lon,city)
+            fetchdata(lat, lon)
         } catch (error) {
-           weatherResult.innerHTML=` <div id="error">somthing went wrong..?</div>  `
+           weatherResult.innerHTML=` <div id="error">somthing went wrong..?</div> `
         }
     }
-    async function fetchdata(lat, lon,city) {
+    async function fetchdata(lat, lon) {
         let apiUrl=`https://openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${apikey}&units=metric`
         console.log(apiUrl);
         let data = await fetch(apiUrl);
