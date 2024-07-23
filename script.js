@@ -9,7 +9,6 @@ button.addEventListener('click', () => {
         try {
             const api = await fetch(`https://openweathermap.org/data/2.5/find?q=${city}&appid=${apikey}&units=metric`);
             const data = await api.json();
-            console.log(data);
             const { lat, lon } = data.list[0].coord;
             fetchdata(lat, lon)
         } catch (error) {
