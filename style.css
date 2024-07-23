@@ -9,6 +9,7 @@ body{
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  overflow: hidden;
 }
 nav{
   margin-top: 10px;
@@ -402,5 +403,3 @@ h4{
   }
   
 }
-/* min =after */
-/* max=before */
