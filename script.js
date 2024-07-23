@@ -13,7 +13,7 @@ button.addEventListener('click', () => {
             const { lat, lon } = data.list[0].coord;
             fetchdata(lat, lon)
         } catch (error) {
-           weatherResult.innerHTML=` <div id="error">somthing went wrong..?</div> `
+           weatherResult.innerHTML=``
         }
     }
     async function fetchdata(lat, lon) {
@@ -28,6 +28,7 @@ button.addEventListener('click', () => {
             weatherResult.innerHTML = `
             <div id="error">somthing went wrong..?</div>
             `;
+            
         }
         
     }
