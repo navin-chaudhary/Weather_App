@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="images/icon.svg">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kalnia+Glaze:wght@100..700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Zain:wght@200;300;400;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+  </head>
+  <body>
+
+    <nav>
+      <div class="app">weather app</div>
+      <div id="inputfild">
+        <input
+          type="text"
+          id="city"
+          spellcheck="false"
+          placeholder="Enter city name 📍"
+          required
+        />
+        <button id="getWeather">Search</button>
+      </div>
+    </nav>
+    <div id="weatherResult">
+      <div class="left-side">
+        <div id="image"></div>
+        <div class="temperature"></div>
+        <div class="weather"></div>
+        <div class="city"></div>
+        <div class="details">
+          <div class="detail-item">
+            <div class="detail-icon">
+                <img src="images/wind.png" alt="Cloud Icon"  id="img4"/>
+            </div>
+            <div class="detail-value"></div>
+          </div>
+          <div class="detail-item">
+            <div class="detail-icon">
+                <img src="images/humidity.png" alt="Cloud Icon"  id="img4"/>
+            </div>
+            <div id="humidity"></div>
+          </div>
+        </div>
+        <h3>Today's Highlights⚡</h3>
+        <div class="daily-forecast">
+          <div class="daily-forecast-item">
+            <div class="card" style="height: 165px">
+              <div class="title" style="margin-top: 5px;">Clouds</div>
+              <div class="icon" style="margin-top: 20px;">
+                <img
+                  src="images/clouds.png"
+                  alt="Cloud Icon"
+                  width="100px"
+                  height="200px"
+                  id="img1"
+                />
+              </div>
+              <div class="clauds"></div>
+            </div>
+          </div>
+          <div class="daily-forecast-item">
+            <div class="card">
+              <div class="gauge">
+                <div class="pressur">Pressure</div>
+                <img
+                  class="gauge-image"
+                  src="images/pressure.png"
+                  alt="Pressure Gauge"
+                  id="img1"
+                />
+              </div>
+              <div class="pressure"></div>
+            </div>
+          </div>
+          <div class="daily-forecast-item">
+            <div class="uv-index">
+              <div class="uv-icon">
+                <div class="uv-index" style="margin-bottom: 20px;">Feels-like</div>
+                <img
+                  class="gauge-image"
+                  src="images/feels_like.png"
+                  alt="Pressure Gauge"
+                  id="img2"
+                  style="margin-top: 15px;"
+                />
+              </div>
+              <div class="uv-value" style="margin-top: 13px;"></div>
+            </div>
+          </div>
+          <div class="daily-forecast-item">
+            <div class="icon">
+              <img src="images/sunrise.4b38195516158273346b.png" alt="Sunrise icon" />
+            </div>
+            <div class="time">6:06 am</div>
+            <div class="text">Sunrise</div>
+
+            <div class="icon">
+              <img src="images/sunset.1e029a7bb7fc308de982.png" alt="Sunset icon" />
+            </div>
+            <div class="time">7:25 pm</div>
+            <div class="text">Sunset</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="right-side">
+        <img
+        src="images/overcast.png"
+        alt="overcast"
+        id="img3"
+      />
+        <div class="righttemperature"></div>
+        <div class="rightweather"></div>
+        <div class="details">
+          <div class="detail-item">
+            <div class="detail-icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#555"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M17 14l-5-5m0 0l-5 5m5-5v7"></path>
+              </svg>
+            </div>
+            <div class="rdetail-value"></div>
+          </div>
+          <div class="detail-item">
+            <div class="detail-icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#555"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M12 2.65l4.875 4.875m0 0l-4.875 4.875m4.875-4.875l4.875 4.875m0 0l-4.875-4.875"
+                ></path>
+              </svg>
+            </div>
+            <div class="rhumidity"></div>
+          </div>
+        </div>
+        <h4>Hourly Forecast⚡</h4>
+        <div class="forecast">
+          <div class="forecast-item">
+            <div class="forecast-time">1 PM</div>
+            <div class="forecast-temp1"></div>
+            <div class="forecast-weather1"></div>
+          </div>
+          <div class="forecast-item">
+            <div class="forecast-time">2 PM</div>
+            <div class="forecast-temp2"></div>
+            <div class="forecast-weather2"></div>
+          </div>
+          <div class="forecast-item">
+            <div class="forecast-time">3 PM</div>
+            <div class="forecast-temp3"></div>
+            <div class="forecast-weather3"></div>
+          </div>
+        </div>
+        <div class="forecast">
+          <div class="forecast-item">
+            <div class="forecast-time">4 PM</div>
+            <div class="forecast-temp4"></div>
+            <div class="forecast-weather4"></div>
+          </div>
+          <div class="forecast-item">
+            <div class="forecast-time">5 PM</div>
+            <div class="forecast-temp5"></div>
+            <div class="forecast-weather5"></div>
+          </div>
+          <div class="forecast-item">
+            <div class="forecast-time">6 PM</div>
+            <div class="forecast-temp6"></div>
+            <div class="forecast-weather6"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
