@@ -382,6 +382,18 @@ h4{
   nav #inputfild input{
     width: 200px;
   }
+  nav #inputfild button {
+    height: 40px;
+    width: 96px;
+  }
+}
+@media only screen and (max-width:350px) {
+  nav .app{
+    display: none;
+  }
+  nav #inputfild input{
+    width: 200px;
+  }
   .forecast-item{
     width: 85px;
   }
