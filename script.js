@@ -4,8 +4,8 @@ form.addEventListener('submit', (e) => {
     const city = document.querySelector('#city').value;
     let apikey=`439d4b804bc8187953eb36d2a8c26a02`;
     const weatherResult = document.getElementById('weatherResult');
+    e.preventDefault()
    
-     e.preventDefault()
     async function findlatlot(city) {
         
         try {
