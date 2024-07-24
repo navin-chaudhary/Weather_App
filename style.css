@@ -11,11 +11,9 @@ body{
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  overflow-x: hidden;
-  background-color: #7bdef4;
 }
 nav{
-  margin-top: 10px;
+  margin-top: 40%;
   height: 70px;
   width: 800px;
   background-color: #6e6c6c;
@@ -52,6 +50,7 @@ nav #inputfild button:hover{
   background-color: #afabab;
   color: white;
 }
+
 #weatherResult{
   display: flex;
   justify-content: space-around;
@@ -384,6 +383,9 @@ h4{
   }
 }
 @media only screen and (max-width:370px) {
+  nav{
+    margin-top: 50vh;
+  }
   nav .app{
     display: none;
   }
