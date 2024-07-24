@@ -384,7 +384,7 @@ h4{
 }
 @media only screen and (max-width:370px) {
   nav{
-    margin-top: 30vh;
+    margin-top: 40vh;
   }
   nav .app{
     display: none;
