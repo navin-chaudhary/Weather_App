@@ -1,11 +1,11 @@
 let button = document.querySelector('#getWeather');
-
-button.addEventListener('click', () => {
+let form=document.querySelector('form')
+form.addEventListener('submit', (e) => {
     const city = document.querySelector('#city').value;
     let apikey=`439d4b804bc8187953eb36d2a8c26a02`;
     const weatherResult = document.getElementById('weatherResult');
-
-    
+   
+     e.preventDefault()
     async function findlatlot(city) {
         
         try {
@@ -31,6 +31,7 @@ button.addEventListener('click', () => {
             displaywether(response)
         }
         else {
+            console.log("error");
             weatherResult.innerHTML = `
             <div id="error">somthing went wrong..?</div>
             `;
@@ -39,6 +40,7 @@ button.addEventListener('click', () => {
         
     }
     function displaywether(response){
+        
         let temp=document.querySelector(".temperature")
         let rtemp=document.querySelector(".righttemperature")
         let weather=document.querySelector(".weather");

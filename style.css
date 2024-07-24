@@ -5,11 +5,14 @@
   font-family: 'Arial', sans-serif;
 }
 body{
+  height: 100%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   overflow-x: hidden;
+  background-color: #7bdef4;
 }
 nav{
   margin-top: 10px;
@@ -255,7 +258,7 @@ h4{
   justify-content: space-around;
   align-items: center;
   gap: 20px;
-  margin-top: 20px;
+  margin-top: 6px;
   margin-bottom: 20px;
 }
 
