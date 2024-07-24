@@ -4,14 +4,21 @@ button.addEventListener('click', () => {
     const city = document.querySelector('#city').value;
     let apikey=`439d4b804bc8187953eb36d2a8c26a02`;
     const weatherResult = document.getElementById('weatherResult');
+
     
     async function findlatlot(city) {
+        
         try {
             const api = await fetch(`https://openweathermap.org/data/2.5/find?q=${city}&appid=${apikey}&units=metric`);
             const data = await api.json();
-            const { lat, lon } = data.list[0].coord;
-            fetchdata(lat, lon)
+            if (data.list && data.list.length > 0) {
+                const { lat, lon } = data.list[0].coord;
+                fetchdata(lat, lon);
+            } else {
+                weatherResult.innerHTML = `<div id="error">City not found.</div>`;
+            }
         } catch (error) {
+            
            weatherResult.innerHTML=``
         }
     }
