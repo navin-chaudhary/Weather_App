@@ -5,6 +5,7 @@ form.addEventListener('submit', (e) => {
     let apikey=`439d4b804bc8187953eb36d2a8c26a02`;
     const weatherResult = document.getElementById('weatherResult');
     let nav =document.querySelector('nav')
+    let footer=document.querySelector('#footer')
     e.preventDefault()
    
     async function findlatlot(city) {
@@ -96,7 +97,7 @@ form.addEventListener('submit', (e) => {
         humidity.innerHTML=`${response.current.humidity}%`;
         rhumidity.innerHTML=`${response.current.humidity}%`;
         cityy.innerHTML=`📍${city}`;
-      
+        footer.innerHTML="@Navin Chaudhary❤️"
        weatherResult.style.display="flex"
     }
     findlatlot(city)

@@ -32,6 +32,7 @@ nav .app {
   color: #12caf4;
   margin-left: 20px;
   font-size: 30px;
+  font-family: Space Grotesk, sans-serif;
 }
 
 nav #inputfild {
@@ -316,6 +317,12 @@ h4 {
 #error {
   color: red;
 }
+#footer{
+  display: flex;
+  justify-content: center;
+  font-family: Space Grotesk, sans-serif;
+  
+}
 
 /* Responsive Styles */
 @media only screen and (min-width:830px) {
@@ -334,7 +341,10 @@ h4 {
     width: 100vw;
     border-radius: 0;
   }
-  
+  body{
+    background: linear-gradient(#8e8b8b,#12caf4);
+    background-repeat: no-repeat;
+  }
   nav .app {
     font-size: 4vw;
   }
