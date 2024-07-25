@@ -5,13 +5,7 @@
   font-family: 'Arial', sans-serif;
   
 }
-form{
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 body {
   height: 100%;
   width: 100%;
@@ -326,7 +320,15 @@ h4 {
 }
 
 /* Responsive Styles */
-
+@media only screen and (min-width:830px) {
+  form{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
 @media only screen and (max-width: 830px) {
   nav {
     margin-top: 0;
