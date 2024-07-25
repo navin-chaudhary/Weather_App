@@ -13,21 +13,19 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  
   background: linear-gradient(#8e8b8b,#12caf4);
   background-repeat: no-repeat;
 }
 
 nav {
-  margin-top: 10px;
+  /* margin-top: 10px; */
   height: 70px;
   width: 800px;
   background-color: #6e6c6c;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-radius: 10px;
   display: flex;
   justify-content: space-between;
-  border-bottom: 2px solid black;
+
 }
 
 nav .app {

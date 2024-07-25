@@ -4,7 +4,7 @@ form.addEventListener('submit', (e) => {
     const city = document.querySelector('#city').value;
     let apikey=`439d4b804bc8187953eb36d2a8c26a02`;
     const weatherResult = document.getElementById('weatherResult');
-    
+    let nav =document.querySelector('nav')
     e.preventDefault()
    
     async function findlatlot(city) {
@@ -41,6 +41,10 @@ form.addEventListener('submit', (e) => {
         
     }
     function displaywether(response){
+        nav.style.borderBottomRightRadius='0px'
+        nav.style.borderBottomLeftRadius='0px'
+
+
         let temp=document.querySelector(".temperature")
         let rtemp=document.querySelector(".righttemperature")
         let weather=document.querySelector(".weather");
