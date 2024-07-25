@@ -97,7 +97,7 @@ form.addEventListener('submit', (e) => {
         humidity.innerHTML=`${response.current.humidity}%`;
         rhumidity.innerHTML=`${response.current.humidity}%`;
         cityy.innerHTML=`📍${city}`;
-        footer.innerHTML="@Navin Chaudhary❤️"
+        footer.innerHTML="@Navin Chaudhary"
        weatherResult.style.display="flex"
     }
     findlatlot(city)
