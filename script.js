@@ -17,7 +17,7 @@ form.addEventListener('submit', (e) => {
                 const { lat, lon } = data.list[0].coord;
                 fetchdata(lat, lon);
             } else {
-                weatherResult.innerHTML = `<div id="error">City not found.</div>`;
+                weatherResult.innerHTML = `<div id="error">City not found.</div>`; 
             }
         } catch (error) {
             
