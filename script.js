@@ -17,17 +17,18 @@ form.addEventListener('submit', (e) => {
                 const { lat, lon } = data.list[0].coord;
                 fetchdata(lat, lon);
             } else {
-                weatherResult.innerHTML = `<div id="error">City not found.</div>`; 
+                weatherResult.innerHTML = `<div id="error">City not found Please Enter Valid Location.</div>`;  
+                
             }
         } catch (error) {
             
-           weatherResult.innerHTML=``
+           weatherResult.innerHTML=`<div id="error">City not found Please Enter Valid Location.</div>`
         }
     }
     async function fetchdata(lat, lon) {
         let apiUrl=`https://openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${apikey}&units=metric`
         console.log(apiUrl);
-        let data = await fetch(apiUrl);
+        try{let data = await fetch(apiUrl);
         let response = await data.json()
         if (response) {
             displaywether(response)
@@ -38,8 +39,10 @@ form.addEventListener('submit', (e) => {
             <div id="error">somthing went wrong..?</div>
             `;
             
-        }
-        
+        } 
+    }catch (error) {
+        weatherResult.innerHTML = `<div id="error">City not found Please Enter Valid Location.</div>`;
+    } 
     }
     function displaywether(response){
         nav.style.borderBottomRightRadius='0px'
