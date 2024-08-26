@@ -38,6 +38,10 @@ form.addEventListener('submit', (e) => {
         let clauds = document.querySelector(".clauds")
         let pressure = document.querySelector(".pressure")
         let Feels = document.querySelector(".uv-value")
+        let images=document.querySelector('#img3')
+        images.src=`${response.current.condition.icon}`
+        images.style.width='130px'
+        images.style.height='130px'
 
         Feels.innerHTML = `${Math.floor(response.current.feelslike_c)}%`
         clauds.innerHTML = `${response.current.cloud}%`
